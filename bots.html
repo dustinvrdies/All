@@ -1,1 +1,21 @@
-<h2 style='color:white'>Bot Control Panel</h2>
+
+<!DOCTYPE html>
+<html>
+<head><title>Bots</title></head>
+<body>
+  <h2>Bot Station</h2>
+  <button onclick="runBot('AutoRead')">Run AutoRead Bot</button>
+  <div id="result"></div>
+  <script>
+    function runBot(botName) {
+      fetch("/api/run-bot", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({bot_name: botName})
+      }).then(res => res.json()).then(data => {
+        document.getElementById("result").textContent = data.status;
+      });
+    }
+  </script>
+</body>
+</html>
