@@ -3,7 +3,4 @@ services:
     name: dah-assistant
     env: node
     buildCommand: npm install
-    startCommand: npm start
-    plan: free
-    branch: main
-    rootDir: .
+    startCommand: node server.js

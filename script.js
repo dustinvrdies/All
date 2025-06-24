@@ -1,5 +1,1 @@
-fetch('/api/message')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('output').textContent = data.message;
-  });
+console.log('DAH Assistant Loaded');
