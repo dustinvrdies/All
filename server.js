@@ -1,14 +1,15 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
 const app = express();
-const path = require('path');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the current directory
+app.use(express.static(path.join(__dirname)));
 
-app.get('/api/message', (req, res) => {
-  res.json({ message: 'Your DAH Assistant is running!' });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
