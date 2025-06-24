@@ -1,12 +1,3 @@
-
-body {
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-}
-a {
-    color: violet;
-    margin: 0 10px;
-}
+body { font-family: Arial; background: #111; color: #eee; padding: 2em; }
+input { padding: 10px; width: 70%; }
+button { padding: 10px; }
