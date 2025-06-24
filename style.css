@@ -1,1 +1,12 @@
-body { font-family: Arial; background: #111; color: white; }
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+a {
+    color: violet;
+    margin: 0 10px;
+}

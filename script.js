@@ -1,1 +1,2 @@
-console.log('DAH Assistant Loaded');
+
+console.log("DAH Assistant loaded");
