@@ -1,2 +1,2 @@
 # DAH Assistant
-An all-in-one AI assistant and bot dashboard.
+Full AI-powered assistant system with bots, wallet, and self-upgrading intelligence.
