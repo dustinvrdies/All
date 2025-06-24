@@ -1,15 +1,15 @@
+
 const express = require('express');
-const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
-app.post('/api/ask', (req, res) => {
-  const prompt = req.body.prompt;
-  // Dummy reply logic for now
-  res.json({ reply: `You asked: "${prompt}" - This is a dummy AI reply.` });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

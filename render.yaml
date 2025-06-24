@@ -2,7 +2,7 @@
 services:
   - type: web
     name: dah-assistant
-    env: python
-    buildCommand: "pip install -r backend/requirements.txt"
-    startCommand: "python backend/main.py"
-    staticPublishPath: frontend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
